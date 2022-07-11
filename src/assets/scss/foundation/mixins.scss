@@ -1,0 +1,52 @@
+
+@use './variables.scss' as *;
+
+// - [ sm ] 〜640px ( スマートフォン縦 スマートフォン横・小さいタブレットの縦)
+// - [ md ] 〜768px（ タブレット・ノートPCなど ）
+// - [ lg ] 〜1024px（ ワイドスクリーンのPC ）
+// - [ xl ] 1280px〜（ ワイドスクリーンのPC ）
+
+// media query Mixin
+@mixin mq($point, $direction: min) {
+  @if $point == smMin {
+    @media print, screen and (min-width: $sm-min) {
+      @content;
+    }
+  } @else if $point == mdMin {
+    @media print, screen and (min-width: $md-min) {
+      @content;
+    }
+  } @else if $point == lgMin {
+    @media print, screen and (min-width: $lg-min) {
+      @content;
+    }
+  } @else if $point == xlMin {
+    @media print, screen and (min-width: $xl-min) {
+      @content;
+    }
+  } @else if $point == smMax {
+    @media screen and (max-width: $sm-max) {
+      @content;
+    }
+  } @else if $point == mdMax {
+    @media screen and (max-width: $md-max) {
+      @content;
+    }
+  }
+  // 変数で定義されていない値の場合
+  @else {
+    @if $direction == min {
+      @media print, screen and (min-width: $point) {
+        @content;
+      }
+    } @else if $direction == max {
+      @media screen and (max-width: $point) {
+        @content;
+      }
+    }
+  }
+}
+// example
+// @include mq(smMin) {
+//  …
+// }

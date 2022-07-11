@@ -17,6 +17,24 @@ ESLint
 <br>
 <br>
 
+## CSS
+
+components/project
+uiに入らない全てのパーツ
+
+components/ui
+これ以上分解できないパーツ
+
+layout
+全体のレイアウト系。ヘッダー、フッター、サイドバー、グローバルなび
+
+pages
+各ページ用
+
+utility
+ユーティリティ
+
 ## 参考文献
 
 - [【コーダー向け】ViteでHTML（ejsライク）・Sass・JSな普通のコーディング環境を作ってみた](https://zenn.dev/sakata_kazuma/articles/59a741489c8bbc)
+- [ITCSSを採用して共同開発しやすいCSS設計をZOZOTOWNに導入した話](https://techblog.zozo.com/entry/itcss-to-zozotown)

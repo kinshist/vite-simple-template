@@ -1,0 +1,75 @@
+/*--------------------------------------
+  Common-Setting
+---------------------------------------*/
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+:root {
+  font-size: 62.5%;
+}
+html {
+  overflow-y: scroll;
+}
+body,
+input,
+button,
+select,
+textarea {
+  font-family: $font-gothic;
+  font-weight: 400;
+}
+body {
+  min-width: 320px;
+
+  background: #fff;
+  color: #000;
+
+  font-size: 1.3rem;
+  line-height: 2;
+  letter-spacing: 1px;
+
+  // デバイスの向きによって文字サイズが変更されないようにする
+  -webkit-text-size-adjust: 100%;
+
+  // 出来るだけ禁則処理を保持する(英数字の単語の途中では折り返さない)
+  // word-wrapの新しい仕様がoverflow-wrap
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // フォントのレンダリングを調整してキレイにみせる
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // 自動カーニングを有効に
+  // 参考) https://ics.media/entry/14087
+  font-feature-settings: "palt";
+  @include mq(mdMin) {
+  }
+}
+img {
+  vertical-align: top; // imgで意図しないマージンがつかないように設定
+  max-width: 100%;
+  height: auto;
+}
+
+//
+// フォーム要素のデフォルトスタイルを削除する場合使用
+//
+// input,
+// button,
+// textarea,
+// select {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   background: none;
+//   border: none;
+//   border-radius: 0;
+//   outline: none;
+//   ::-moz-focus-inner {
+//     border: none;
+//   }
+// }
+label {
+  cursor: pointer;
+}

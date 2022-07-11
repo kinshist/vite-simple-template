@@ -1,8 +1,6 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@use 'foundation/reset.scss';
+// @use 'foundation/variables.scss';
+@use 'foundation/mixins.scss';
+@use 'foundation/settings.scss';
+// @use 'ui/button.scss';
+

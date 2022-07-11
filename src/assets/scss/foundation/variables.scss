@@ -1,0 +1,53 @@
+// Colors
+// --------------------------------------------------
+
+// gray
+$color-gray-400: #ded6cc;
+$color-gray-500: #baad9c;
+$color-gray-600: #666;
+
+// blue
+$color-blue-400: #eaf0f7;
+$color-blue-500: #3781be;
+$color-blue-600: #434d72;
+
+// pink
+$color-pink-400: #f9efef;
+$color-pink-500: #f09cab;
+$color-pink-600: #d98282;
+
+$color-rainbow: linear-gradient(to right, #ffebeb, #fff4e3, #e8ffef, #ebf6ff);
+$color-rainbow2: linear-gradient(
+  to right,
+  #ffebeb 15%,
+  #fff4e3 25%,
+  #e8ffef 40%,
+  #ebf6ff 65%,
+  #ffebeb 85%,
+  #fff4e3 90%,
+  #e8ffef 95%,
+  #ebf6ff 100%
+);
+
+// Font
+// --------------------------------------------------
+
+$font-gothic: "Noto Sans JP", "Helvetica Neue", Arial,
+  "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+$font-gothicAlphabet: "Overpass", Helvetica, Arial, "游ゴシック体", YuGothic,
+  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+  "ＭＳ Ｐゴシック", sans-serif;
+
+// Media query
+// --------------------------------------------------
+//ブレイクポイント設定はtailwind cssを元にsています。
+
+// breakpoint
+$sm-min: 640px;
+$md-min: 768px;
+$lg-min: 1024px;
+$xl-min: 1280px;
+
+$sm-max: ($sm-min - 1); //639px
+$md-max: ($md-min - 1); //767px
+
